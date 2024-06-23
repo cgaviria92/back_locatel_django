@@ -1,0 +1,84 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+
+# Ignore the local environment settings
+.env
+
+# Ignore the local databases
+db.sqlite3
+
+# Django migrations
+**/migrations/*
+
+# Local environment
+.env
+.env.*
+
+# Node modules (for frontend)
+node_modules/
+npm-debug.log
+
+# VS Code
+.vscode/
+
+# PyCharm
+.idea/
+
+# Environments
+.env
+.venv
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Pytest cache
+.pytest_cache/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Static files
+/static/
+staticfiles/
+media/
+
+# Ignore Docker related files
+docker-compose.override.yml
+
+# Ignore macOS specific files
+.DS_Store
+
+# Ignore Python egg info
+*.egg-info/
+*.egg
+
+# Ignore virtual environment folder
+env/
+
+# Ignore IDE specific files
+.vscode/
+.idea/
