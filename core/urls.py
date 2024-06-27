@@ -1,15 +1,10 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-
-#from .soap_services import SOAPService
+from django.urls import include, path
 from .views import ClienteViewSet, ProductoViewSet, CabeceraVentaViewSet, DetalleVentaViewSet
 
-router = DefaultRouter()
-router.register(r'clientes', ClienteViewSet, basename='cliente')
-router.register(r'productos', ProductoViewSet, basename='producto')
-router.register(r'cabecera-ventas', CabeceraVentaViewSet, basename='cabeceraventa')
-router.register(r'detalle-ventas', DetalleVentaViewSet, basename='detalleventa')
-
 urlpatterns = [
-    path('', include(router.urls)),
+    path('clientes/', ClienteViewSet.as_view(), name='cliente-list-create'),
+    path('productos/', ProductoViewSet.as_view(), name='producto-list-create'),
+    path('cabecera-ventas/', CabeceraVentaViewSet.as_view(), name='cabecera-venta-list-create'),
+    path('detalle-ventas/', DetalleVentaViewSet.as_view(), name='detalle-venta-list-create'),
+    path('api-auth/', include('rest_framework.urls')),
 ]
